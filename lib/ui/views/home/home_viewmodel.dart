@@ -5,6 +5,7 @@ import 'package:stacked/stacked.dart';
 
 class HomeViewModel extends BaseViewModel {
   final SalonService _salonService = SalonService();
+  final tabs = ['Haircut', 'Blowout', 'Nail', 'Massage', 'Facial'];
 
   String selectedTab = 'Haircut';
   List<Salon> salons = [];

@@ -5,129 +5,173 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter/material.dart' as _i12;
-import 'package:stacked/stacked.dart' as _i11;
-import 'package:stacked_services/stacked_services.dart' as _i10;
+import 'package:flutter/material.dart' as _i16;
+import 'package:stacked/stacked.dart' as _i15;
+import 'package:stacked_services/stacked_services.dart' as _i14;
 
+import '../ui/views/appointment/appointment_view.dart' as _i11;
 import '../ui/views/booking/booking_view.dart' as _i8;
+import '../ui/views/favorites/favorites_view.dart' as _i12;
 import '../ui/views/home/home_view.dart' as _i2;
 import '../ui/views/login/login_view.dart' as _i1;
 import '../ui/views/main/main_view.dart' as _i9;
+import '../ui/views/profile/profile_view.dart' as _i10;
 import '../ui/views/salon_details/salon_details_view.dart' as _i6;
+import '../ui/views/search/search_view.dart' as _i13;
 import '../ui/views/signup/signup_view.dart' as _i5;
 import '../ui/views/splash/splash_view.dart' as _i4;
 import '../ui/views/staff_profiles/staff_profiles_view.dart' as _i7;
 import '../ui/views/startup/startup_view.dart' as _i3;
 
 final stackedRouter =
-    StackedRouterWeb(navigatorKey: _i10.StackedService.navigatorKey);
+    StackedRouterWeb(navigatorKey: _i14.StackedService.navigatorKey);
 
-class StackedRouterWeb extends _i11.RootStackRouter {
-  StackedRouterWeb({_i12.GlobalKey<_i12.NavigatorState>? navigatorKey})
+class StackedRouterWeb extends _i15.RootStackRouter {
+  StackedRouterWeb({_i16.GlobalKey<_i16.NavigatorState>? navigatorKey})
       : super(navigatorKey);
 
   @override
-  final Map<String, _i11.PageFactory> pagesMap = {
+  final Map<String, _i15.PageFactory> pagesMap = {
     LoginViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i1.LoginView(),
       );
     },
     HomeViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i2.HomeView(),
       );
     },
     StartupViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i3.StartupView(),
       );
     },
     SplashViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i4.SplashView(),
       );
     },
     SignupViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i5.SignupView(),
       );
     },
     SalonDetailsViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i6.SalonDetailsView(),
       );
     },
     StaffProfilesViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i7.StaffProfilesView(),
       );
     },
     BookingViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i8.BookingView(),
       );
     },
     MainViewRoute.name: (routeData) {
-      return _i11.MaterialPageX<dynamic>(
+      return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
         child: const _i9.MainView(),
+      );
+    },
+    ProfileViewRoute.name: (routeData) {
+      return _i15.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i10.ProfileView(),
+      );
+    },
+    AppointmentViewRoute.name: (routeData) {
+      return _i15.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i11.AppointmentView(),
+      );
+    },
+    FavoritesViewRoute.name: (routeData) {
+      return _i15.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i12.FavoritesView(),
+      );
+    },
+    SearchViewRoute.name: (routeData) {
+      return _i15.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i13.SearchView(),
       );
     },
   };
 
   @override
-  List<_i11.RouteConfig> get routes => [
-        _i11.RouteConfig(
+  List<_i15.RouteConfig> get routes => [
+        _i15.RouteConfig(
           LoginViewRoute.name,
           path: '/',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           HomeViewRoute.name,
           path: '/home-view',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           StartupViewRoute.name,
           path: '/startup-view',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           SplashViewRoute.name,
           path: '/splash-view',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           SignupViewRoute.name,
           path: '/signup-view',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           SalonDetailsViewRoute.name,
           path: '/salon-details-view',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           StaffProfilesViewRoute.name,
           path: '/staff-profiles-view',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           BookingViewRoute.name,
           path: '/booking-view',
         ),
-        _i11.RouteConfig(
+        _i15.RouteConfig(
           MainViewRoute.name,
           path: '/main-view',
+        ),
+        _i15.RouteConfig(
+          ProfileViewRoute.name,
+          path: '/profile-view',
+        ),
+        _i15.RouteConfig(
+          AppointmentViewRoute.name,
+          path: '/appointment-view',
+        ),
+        _i15.RouteConfig(
+          FavoritesViewRoute.name,
+          path: '/favorites-view',
+        ),
+        _i15.RouteConfig(
+          SearchViewRoute.name,
+          path: '/search-view',
         ),
       ];
 }
 
 /// generated route for
 /// [_i1.LoginView]
-class LoginViewRoute extends _i11.PageRouteInfo<void> {
+class LoginViewRoute extends _i15.PageRouteInfo<void> {
   const LoginViewRoute()
       : super(
           LoginViewRoute.name,
@@ -139,7 +183,7 @@ class LoginViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.HomeView]
-class HomeViewRoute extends _i11.PageRouteInfo<void> {
+class HomeViewRoute extends _i15.PageRouteInfo<void> {
   const HomeViewRoute()
       : super(
           HomeViewRoute.name,
@@ -151,7 +195,7 @@ class HomeViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.StartupView]
-class StartupViewRoute extends _i11.PageRouteInfo<void> {
+class StartupViewRoute extends _i15.PageRouteInfo<void> {
   const StartupViewRoute()
       : super(
           StartupViewRoute.name,
@@ -163,7 +207,7 @@ class StartupViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.SplashView]
-class SplashViewRoute extends _i11.PageRouteInfo<void> {
+class SplashViewRoute extends _i15.PageRouteInfo<void> {
   const SplashViewRoute()
       : super(
           SplashViewRoute.name,
@@ -175,7 +219,7 @@ class SplashViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i5.SignupView]
-class SignupViewRoute extends _i11.PageRouteInfo<void> {
+class SignupViewRoute extends _i15.PageRouteInfo<void> {
   const SignupViewRoute()
       : super(
           SignupViewRoute.name,
@@ -187,7 +231,7 @@ class SignupViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i6.SalonDetailsView]
-class SalonDetailsViewRoute extends _i11.PageRouteInfo<void> {
+class SalonDetailsViewRoute extends _i15.PageRouteInfo<void> {
   const SalonDetailsViewRoute()
       : super(
           SalonDetailsViewRoute.name,
@@ -199,7 +243,7 @@ class SalonDetailsViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i7.StaffProfilesView]
-class StaffProfilesViewRoute extends _i11.PageRouteInfo<void> {
+class StaffProfilesViewRoute extends _i15.PageRouteInfo<void> {
   const StaffProfilesViewRoute()
       : super(
           StaffProfilesViewRoute.name,
@@ -211,7 +255,7 @@ class StaffProfilesViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i8.BookingView]
-class BookingViewRoute extends _i11.PageRouteInfo<void> {
+class BookingViewRoute extends _i15.PageRouteInfo<void> {
   const BookingViewRoute()
       : super(
           BookingViewRoute.name,
@@ -223,7 +267,7 @@ class BookingViewRoute extends _i11.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i9.MainView]
-class MainViewRoute extends _i11.PageRouteInfo<void> {
+class MainViewRoute extends _i15.PageRouteInfo<void> {
   const MainViewRoute()
       : super(
           MainViewRoute.name,
@@ -233,9 +277,57 @@ class MainViewRoute extends _i11.PageRouteInfo<void> {
   static const String name = 'MainView';
 }
 
-extension RouterStateExtension on _i10.RouterService {
+/// generated route for
+/// [_i10.ProfileView]
+class ProfileViewRoute extends _i15.PageRouteInfo<void> {
+  const ProfileViewRoute()
+      : super(
+          ProfileViewRoute.name,
+          path: '/profile-view',
+        );
+
+  static const String name = 'ProfileView';
+}
+
+/// generated route for
+/// [_i11.AppointmentView]
+class AppointmentViewRoute extends _i15.PageRouteInfo<void> {
+  const AppointmentViewRoute()
+      : super(
+          AppointmentViewRoute.name,
+          path: '/appointment-view',
+        );
+
+  static const String name = 'AppointmentView';
+}
+
+/// generated route for
+/// [_i12.FavoritesView]
+class FavoritesViewRoute extends _i15.PageRouteInfo<void> {
+  const FavoritesViewRoute()
+      : super(
+          FavoritesViewRoute.name,
+          path: '/favorites-view',
+        );
+
+  static const String name = 'FavoritesView';
+}
+
+/// generated route for
+/// [_i13.SearchView]
+class SearchViewRoute extends _i15.PageRouteInfo<void> {
+  const SearchViewRoute()
+      : super(
+          SearchViewRoute.name,
+          path: '/search-view',
+        );
+
+  static const String name = 'SearchView';
+}
+
+extension RouterStateExtension on _i14.RouterService {
   Future<dynamic> navigateToLoginView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const LoginViewRoute(),
       onFailure: onFailure,
@@ -243,7 +335,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToHomeView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const HomeViewRoute(),
       onFailure: onFailure,
@@ -251,7 +343,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToStartupView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const StartupViewRoute(),
       onFailure: onFailure,
@@ -259,7 +351,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToSplashView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const SplashViewRoute(),
       onFailure: onFailure,
@@ -267,7 +359,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToSignupView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const SignupViewRoute(),
       onFailure: onFailure,
@@ -275,7 +367,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToSalonDetailsView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const SalonDetailsViewRoute(),
       onFailure: onFailure,
@@ -283,7 +375,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToStaffProfilesView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const StaffProfilesViewRoute(),
       onFailure: onFailure,
@@ -291,7 +383,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToBookingView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const BookingViewRoute(),
       onFailure: onFailure,
@@ -299,15 +391,47 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> navigateToMainView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(
       const MainViewRoute(),
       onFailure: onFailure,
     );
   }
 
+  Future<dynamic> navigateToProfileView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const ProfileViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> navigateToAppointmentView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const AppointmentViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> navigateToFavoritesView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const FavoritesViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> navigateToSearchView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const SearchViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
   Future<dynamic> replaceWithLoginView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const LoginViewRoute(),
       onFailure: onFailure,
@@ -315,7 +439,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithHomeView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const HomeViewRoute(),
       onFailure: onFailure,
@@ -323,7 +447,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithStartupView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const StartupViewRoute(),
       onFailure: onFailure,
@@ -331,7 +455,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithSplashView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const SplashViewRoute(),
       onFailure: onFailure,
@@ -339,7 +463,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithSignupView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const SignupViewRoute(),
       onFailure: onFailure,
@@ -347,7 +471,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithSalonDetailsView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const SalonDetailsViewRoute(),
       onFailure: onFailure,
@@ -355,7 +479,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithStaffProfilesView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const StaffProfilesViewRoute(),
       onFailure: onFailure,
@@ -363,7 +487,7 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithBookingView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const BookingViewRoute(),
       onFailure: onFailure,
@@ -371,9 +495,41 @@ extension RouterStateExtension on _i10.RouterService {
   }
 
   Future<dynamic> replaceWithMainView(
-      {void Function(_i11.NavigationFailure)? onFailure}) async {
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
     return replaceWith(
       const MainViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> replaceWithProfileView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const ProfileViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> replaceWithAppointmentView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const AppointmentViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> replaceWithFavoritesView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const FavoritesViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> replaceWithSearchView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const SearchViewRoute(),
       onFailure: onFailure,
     );
   }

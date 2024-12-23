@@ -1,3 +1,6 @@
+import 'package:clickandcare/ui/views/home/widgets/salon_list.dart';
+import 'package:clickandcare/ui/views/home/widgets/search_bar.dart';
+import 'package:clickandcare/ui/views/home/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:clickandcare/ui/common/app_colors.dart';
@@ -14,17 +17,23 @@ class HomeView extends StackedView<HomeViewModel> {
     HomeViewModel viewModel,
     Widget? child,
   ) {
-    return const Scaffold(
-      body: SafeArea(
-        child: Center(
-          child: Text(
-            'Home View',
-            style: TextStyle(
-                fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
-          ),
+    return Scaffold(
+        body: SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            const HomeSearchBar(),
+            HomeTabBar(
+                selectedTab: viewModel.selectedTab,
+                onTabChange: viewModel.changeTab),
+            Expanded(
+              child: SalonList(salons: viewModel.salons),
+            ),
+          ],
         ),
       ),
-    );
+    ));
   }
 
   @override

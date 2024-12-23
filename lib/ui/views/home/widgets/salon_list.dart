@@ -9,12 +9,12 @@ class SalonList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: const EdgeInsets.all(15),
+      padding: const EdgeInsets.all(10),
       itemCount: salons.length,
       itemBuilder: (context, index) {
         final salon = salons[index];
         return Padding(
-          padding: const EdgeInsets.only(bottom: 15.0),
+          padding: const EdgeInsets.fromLTRB(2, 0, 2, 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

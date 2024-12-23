@@ -15,6 +15,10 @@ import 'package:clickandcare/services/staff_service.dart';
 import 'package:clickandcare/services/theme_service.dart';
 import 'package:clickandcare/ui/views/main/main_view.dart';
 
+import 'package:clickandcare/ui/views/profile/profile_view.dart';
+import 'package:clickandcare/ui/views/appointment/appointment_view.dart';
+import 'package:clickandcare/ui/views/favorites/favorites_view.dart';
+import 'package:clickandcare/ui/views/search/search_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -28,6 +32,10 @@ import 'package:clickandcare/ui/views/main/main_view.dart';
     MaterialRoute(page: StaffProfilesView),
     MaterialRoute(page: BookingView),
     MaterialRoute(page: MainView),
+    MaterialRoute(page: ProfileView),
+    MaterialRoute(page: AppointmentView),
+    MaterialRoute(page: FavoritesView),
+    MaterialRoute(page: SearchView),
 // @stacked-route
   ],
   dependencies: [
