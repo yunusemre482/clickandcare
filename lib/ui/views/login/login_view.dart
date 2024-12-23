@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'login_viewmodel.dart';
 
 class LoginView extends StackedView<LoginViewModel> {
@@ -80,9 +80,9 @@ class LoginView extends StackedView<LoginViewModel> {
             SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                    onPressed: () => {},
+                    onPressed: () => {viewModel.navigateToHomeView()},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Theme.of(context).primaryColor,
+                      backgroundColor: Colors.blueAccent,
                       shadowColor: Colors.grey, // Gölge rengi
                       elevation: 2, // Gölgenin yüksekliği
                       shape: RoundedRectangleBorder(
@@ -168,23 +168,23 @@ class LoginView extends StackedView<LoginViewModel> {
               children: [
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(
-                    Icons.facebook,
+                  icon: const FaIcon(
+                    FontAwesomeIcons.squareFacebook,
                     color: Colors.blue,
                   ),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(
-                    Icons.mail,
-                    color: Colors.red,
+                  icon: const FaIcon(
+                    FontAwesomeIcons.instagram,
+                    color: Colors.deepOrange,
                   ),
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(
-                    Icons.phone,
-                    color: Colors.green,
+                  icon: const FaIcon(
+                    FontAwesomeIcons.linkedin,
+                    color: Colors.blueAccent,
                   ),
                 ),
               ],

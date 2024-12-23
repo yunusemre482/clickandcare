@@ -8,7 +8,9 @@ import 'package:stacked_services/stacked_services.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await setupLocator();
+  await setupLocator(
+    stackedRouter: stackedRouter,
+  );
   setupDialogUi();
   setupBottomSheetUi();
   runApp(const MainApp());
@@ -19,14 +21,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: Routes.loginView,
-      onGenerateRoute: StackedRouter().onGenerateRoute,
-      navigatorKey: StackedService.navigatorKey,
+    return MaterialApp.router(
+      routeInformationParser: stackedRouter.defaultRouteParser(),
+      routerDelegate: stackedRouter.delegate(initialRoutes: [
+        const LoginViewRoute(),
+      ]),
       theme: CustomThemeService.lightTheme,
-      navigatorObservers: [
-        StackedService.routeObserver,
-      ],
+      darkTheme: CustomThemeService.darkTheme,
     );
   }
 }

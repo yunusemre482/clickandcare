@@ -13,6 +13,8 @@ import 'package:clickandcare/ui/views/booking/booking_view.dart';
 import 'package:clickandcare/services/authentication_service.dart';
 import 'package:clickandcare/services/staff_service.dart';
 import 'package:clickandcare/services/theme_service.dart';
+import 'package:clickandcare/ui/views/main/main_view.dart';
+
 // @stacked-import
 
 @StackedApp(
@@ -25,9 +27,11 @@ import 'package:clickandcare/services/theme_service.dart';
     MaterialRoute(page: SalonDetailsView),
     MaterialRoute(page: StaffProfilesView),
     MaterialRoute(page: BookingView),
+    MaterialRoute(page: MainView),
 // @stacked-route
   ],
   dependencies: [
+    LazySingleton(classType: RouterService),
     LazySingleton(classType: BottomSheetService),
     LazySingleton(classType: DialogService),
     LazySingleton(classType: NavigationService),

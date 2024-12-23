@@ -15,7 +15,7 @@ class CustomThemeService {
         outlineBorder: BorderSide(
           color: Colors.black,
         ),
-        focusColor:Colors.blueGrey,
+        focusColor: Colors.blueGrey,
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.black,

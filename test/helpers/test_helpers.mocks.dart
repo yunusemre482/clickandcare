@@ -8,7 +8,6 @@ import 'dart:ui' as _i6;
 
 import 'package:clickandcare/services/authentication_service.dart' as _i7;
 import 'package:clickandcare/services/staff_service.dart' as _i8;
-import 'package:clickandcare/services/theme_service.dart' as _i9;
 import 'package:flutter/material.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i3;
@@ -707,4 +706,3 @@ class MockAuthenticationService extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockStaffService extends _i1.Mock implements _i8.StaffService {}
-

@@ -1,370 +1,380 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
-// StackedNavigatorGenerator
+// StackedRouterGenerator
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:clickandcare/ui/views/booking/booking_view.dart' as _i9;
-import 'package:clickandcare/ui/views/home/home_view.dart' as _i3;
-import 'package:clickandcare/ui/views/login/login_view.dart' as _i2;
-import 'package:clickandcare/ui/views/salon_details/salon_details_view.dart'
-    as _i7;
-import 'package:clickandcare/ui/views/signup/signup_view.dart' as _i6;
-import 'package:clickandcare/ui/views/splash/splash_view.dart' as _i5;
-import 'package:clickandcare/ui/views/staff_profiles/staff_profiles_view.dart'
-    as _i8;
-import 'package:clickandcare/ui/views/startup/startup_view.dart' as _i4;
-import 'package:flutter/material.dart' as _i10;
-import 'package:flutter/material.dart';
-import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i11;
+import 'package:flutter/material.dart' as _i12;
+import 'package:stacked/stacked.dart' as _i11;
+import 'package:stacked_services/stacked_services.dart' as _i10;
 
-class Routes {
-  static const loginView = '/';
+import '../ui/views/booking/booking_view.dart' as _i8;
+import '../ui/views/home/home_view.dart' as _i2;
+import '../ui/views/login/login_view.dart' as _i1;
+import '../ui/views/main/main_view.dart' as _i9;
+import '../ui/views/salon_details/salon_details_view.dart' as _i6;
+import '../ui/views/signup/signup_view.dart' as _i5;
+import '../ui/views/splash/splash_view.dart' as _i4;
+import '../ui/views/staff_profiles/staff_profiles_view.dart' as _i7;
+import '../ui/views/startup/startup_view.dart' as _i3;
 
-  static const homeView = '/home-view';
+final stackedRouter =
+    StackedRouterWeb(navigatorKey: _i10.StackedService.navigatorKey);
 
-  static const startupView = '/startup-view';
+class StackedRouterWeb extends _i11.RootStackRouter {
+  StackedRouterWeb({_i12.GlobalKey<_i12.NavigatorState>? navigatorKey})
+      : super(navigatorKey);
 
-  static const splashView = '/splash-view';
-
-  static const signupView = '/signup-view';
-
-  static const salonDetailsView = '/salon-details-view';
-
-  static const staffProfilesView = '/staff-profiles-view';
-
-  static const bookingView = '/booking-view';
-
-  static const all = <String>{
-    loginView,
-    homeView,
-    startupView,
-    splashView,
-    signupView,
-    salonDetailsView,
-    staffProfilesView,
-    bookingView,
-  };
-}
-
-class StackedRouter extends _i1.RouterBase {
-  final _routes = <_i1.RouteDef>[
-    _i1.RouteDef(
-      Routes.loginView,
-      page: _i2.LoginView,
-    ),
-    _i1.RouteDef(
-      Routes.homeView,
-      page: _i3.HomeView,
-    ),
-    _i1.RouteDef(
-      Routes.startupView,
-      page: _i4.StartupView,
-    ),
-    _i1.RouteDef(
-      Routes.splashView,
-      page: _i5.SplashView,
-    ),
-    _i1.RouteDef(
-      Routes.signupView,
-      page: _i6.SignupView,
-    ),
-    _i1.RouteDef(
-      Routes.salonDetailsView,
-      page: _i7.SalonDetailsView,
-    ),
-    _i1.RouteDef(
-      Routes.staffProfilesView,
-      page: _i8.StaffProfilesView,
-    ),
-    _i1.RouteDef(
-      Routes.bookingView,
-      page: _i9.BookingView,
-    ),
-  ];
-
-  final _pagesMap = <Type, _i1.StackedRouteFactory>{
-    _i2.LoginView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i2.LoginView(),
-        settings: data,
+  @override
+  final Map<String, _i11.PageFactory> pagesMap = {
+    LoginViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i1.LoginView(),
       );
     },
-    _i3.HomeView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i3.HomeView(),
-        settings: data,
+    HomeViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i2.HomeView(),
       );
     },
-    _i4.StartupView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i4.StartupView(),
-        settings: data,
+    StartupViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i3.StartupView(),
       );
     },
-    _i5.SplashView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i5.SplashView(),
-        settings: data,
+    SplashViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i4.SplashView(),
       );
     },
-    _i6.SignupView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i6.SignupView(),
-        settings: data,
+    SignupViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i5.SignupView(),
       );
     },
-    _i7.SalonDetailsView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i7.SalonDetailsView(),
-        settings: data,
+    SalonDetailsViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i6.SalonDetailsView(),
       );
     },
-    _i8.StaffProfilesView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i8.StaffProfilesView(),
-        settings: data,
+    StaffProfilesViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i7.StaffProfilesView(),
       );
     },
-    _i9.BookingView: (data) {
-      return _i10.MaterialPageRoute<dynamic>(
-        builder: (context) => const _i9.BookingView(),
-        settings: data,
+    BookingViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i8.BookingView(),
+      );
+    },
+    MainViewRoute.name: (routeData) {
+      return _i11.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i9.MainView(),
       );
     },
   };
 
   @override
-  List<_i1.RouteDef> get routes => _routes;
-
-  @override
-  Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
+  List<_i11.RouteConfig> get routes => [
+        _i11.RouteConfig(
+          LoginViewRoute.name,
+          path: '/',
+        ),
+        _i11.RouteConfig(
+          HomeViewRoute.name,
+          path: '/home-view',
+        ),
+        _i11.RouteConfig(
+          StartupViewRoute.name,
+          path: '/startup-view',
+        ),
+        _i11.RouteConfig(
+          SplashViewRoute.name,
+          path: '/splash-view',
+        ),
+        _i11.RouteConfig(
+          SignupViewRoute.name,
+          path: '/signup-view',
+        ),
+        _i11.RouteConfig(
+          SalonDetailsViewRoute.name,
+          path: '/salon-details-view',
+        ),
+        _i11.RouteConfig(
+          StaffProfilesViewRoute.name,
+          path: '/staff-profiles-view',
+        ),
+        _i11.RouteConfig(
+          BookingViewRoute.name,
+          path: '/booking-view',
+        ),
+        _i11.RouteConfig(
+          MainViewRoute.name,
+          path: '/main-view',
+        ),
+      ];
 }
 
-extension NavigatorStateExtension on _i11.NavigationService {
-  Future<dynamic> navigateToLoginView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.loginView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+/// generated route for
+/// [_i1.LoginView]
+class LoginViewRoute extends _i11.PageRouteInfo<void> {
+  const LoginViewRoute()
+      : super(
+          LoginViewRoute.name,
+          path: '/',
+        );
+
+  static const String name = 'LoginView';
+}
+
+/// generated route for
+/// [_i2.HomeView]
+class HomeViewRoute extends _i11.PageRouteInfo<void> {
+  const HomeViewRoute()
+      : super(
+          HomeViewRoute.name,
+          path: '/home-view',
+        );
+
+  static const String name = 'HomeView';
+}
+
+/// generated route for
+/// [_i3.StartupView]
+class StartupViewRoute extends _i11.PageRouteInfo<void> {
+  const StartupViewRoute()
+      : super(
+          StartupViewRoute.name,
+          path: '/startup-view',
+        );
+
+  static const String name = 'StartupView';
+}
+
+/// generated route for
+/// [_i4.SplashView]
+class SplashViewRoute extends _i11.PageRouteInfo<void> {
+  const SplashViewRoute()
+      : super(
+          SplashViewRoute.name,
+          path: '/splash-view',
+        );
+
+  static const String name = 'SplashView';
+}
+
+/// generated route for
+/// [_i5.SignupView]
+class SignupViewRoute extends _i11.PageRouteInfo<void> {
+  const SignupViewRoute()
+      : super(
+          SignupViewRoute.name,
+          path: '/signup-view',
+        );
+
+  static const String name = 'SignupView';
+}
+
+/// generated route for
+/// [_i6.SalonDetailsView]
+class SalonDetailsViewRoute extends _i11.PageRouteInfo<void> {
+  const SalonDetailsViewRoute()
+      : super(
+          SalonDetailsViewRoute.name,
+          path: '/salon-details-view',
+        );
+
+  static const String name = 'SalonDetailsView';
+}
+
+/// generated route for
+/// [_i7.StaffProfilesView]
+class StaffProfilesViewRoute extends _i11.PageRouteInfo<void> {
+  const StaffProfilesViewRoute()
+      : super(
+          StaffProfilesViewRoute.name,
+          path: '/staff-profiles-view',
+        );
+
+  static const String name = 'StaffProfilesView';
+}
+
+/// generated route for
+/// [_i8.BookingView]
+class BookingViewRoute extends _i11.PageRouteInfo<void> {
+  const BookingViewRoute()
+      : super(
+          BookingViewRoute.name,
+          path: '/booking-view',
+        );
+
+  static const String name = 'BookingView';
+}
+
+/// generated route for
+/// [_i9.MainView]
+class MainViewRoute extends _i11.PageRouteInfo<void> {
+  const MainViewRoute()
+      : super(
+          MainViewRoute.name,
+          path: '/main-view',
+        );
+
+  static const String name = 'MainView';
+}
+
+extension RouterStateExtension on _i10.RouterService {
+  Future<dynamic> navigateToLoginView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const LoginViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> navigateToHomeView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.homeView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToHomeView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const HomeViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> navigateToStartupView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.startupView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToStartupView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const StartupViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> navigateToSplashView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.splashView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToSplashView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const SplashViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> navigateToSignupView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.signupView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToSignupView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const SignupViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> navigateToSalonDetailsView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.salonDetailsView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToSalonDetailsView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const SalonDetailsViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> navigateToStaffProfilesView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.staffProfilesView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToStaffProfilesView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const StaffProfilesViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> navigateToBookingView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return navigateTo<dynamic>(Routes.bookingView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToBookingView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const BookingViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithLoginView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.loginView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> navigateToMainView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const MainViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithHomeView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.homeView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> replaceWithLoginView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const LoginViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithStartupView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.startupView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> replaceWithHomeView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const HomeViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithSplashView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.splashView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> replaceWithStartupView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const StartupViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithSignupView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.signupView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> replaceWithSplashView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const SplashViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithSalonDetailsView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.salonDetailsView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> replaceWithSignupView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const SignupViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithStaffProfilesView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.staffProfilesView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> replaceWithSalonDetailsView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const SalonDetailsViewRoute(),
+      onFailure: onFailure,
+    );
   }
 
-  Future<dynamic> replaceWithBookingView([
-    int? routerId,
-    bool preventDuplicates = true,
-    Map<String, String>? parameters,
-    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
-        transition,
-  ]) async {
-    return replaceWith<dynamic>(Routes.bookingView,
-        id: routerId,
-        preventDuplicates: preventDuplicates,
-        parameters: parameters,
-        transition: transition);
+  Future<dynamic> replaceWithStaffProfilesView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const StaffProfilesViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> replaceWithBookingView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const BookingViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
+  Future<dynamic> replaceWithMainView(
+      {void Function(_i11.NavigationFailure)? onFailure}) async {
+    return replaceWith(
+      const MainViewRoute(),
+      onFailure: onFailure,
+    );
   }
 }
