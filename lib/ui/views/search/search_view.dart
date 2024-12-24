@@ -1,6 +1,5 @@
 import 'package:clickandcare/ui/views/home/widgets/home_searchbar.dart';
 import 'package:clickandcare/ui/views/search/widgets/salon_list.dart';
-import 'package:clickandcare/ui/views/search/widgets/search_bar.dart';
 import 'package:clickandcare/ui/views/search/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -29,12 +28,23 @@ class SearchView extends StackedView<SearchViewModel> {
                 selectedTab: viewModel.selectedTab,
                 onTabChange: viewModel.changeTab),
             Expanded(
-              child: SalonList(salons: viewModel.salons),
+              child: viewModel.isLoading
+                  ? const Center(
+                      child: CircularProgressIndicator(), // Show a loader
+                    )
+                  : SalonList(salons: viewModel.salons),
             ),
           ],
         ),
       ),
     ));
+  }
+
+  @override
+  void onViewModelReady(SearchViewModel viewModel) {
+    super.onViewModelReady(viewModel);
+    viewModel
+        .initialize(); // Ensure initialize is called when the ViewModel is ready
   }
 
   @override

@@ -1,3 +1,5 @@
+import 'package:clickandcare/ui/views/appointment/widgets/appointment_item.dart';
+import 'package:clickandcare/ui/views/appointment/widgets/new_appointment_form.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -13,17 +15,49 @@ class AppointmentView extends StackedView<AppointmentViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      body: Container(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-        child: const Center(
-          child: Text(
-            'Appointment',
+      appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          title: const Text(
+            'Appointments',
             style: TextStyle(
-              fontSize: 30,
+              color: Colors.black,
+              fontSize: 20,
               fontWeight: FontWeight.w600,
             ),
-          ),
+          )),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(16),
+        itemCount: viewModel.appointments.length,
+        itemBuilder: (context, index) {
+          final appointment = viewModel.appointments[index];
+          return AppointmentItem(
+            salon: appointment['salon']!,
+            service: appointment['service']!,
+            date: appointment['date']!,
+            time: appointment['time']!,
+            imageUrl: appointment['image']!,
+          );
+        },
+      ),
+      floatingActionButton: FloatingActionButton.small(
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            isScrollControlled: true,
+            builder: (context) {
+              return const NewAppointmentForm();
+            },
+          );
+        },
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50),
+        ),
+        backgroundColor: Colors.blueAccent,
+        focusColor: Colors.blueAccent,
+        child: const Icon(
+          Icons.add,
+          color: Colors.white,
         ),
       ),
     );

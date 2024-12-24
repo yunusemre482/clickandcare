@@ -1,3 +1,7 @@
+import 'package:clickandcare/ui/views/profile/widgets/action_buttons.dart';
+import 'package:clickandcare/ui/views/profile/widgets/profile_header.dart';
+import 'package:clickandcare/ui/views/profile/widgets/recent_activity.dart';
+import 'package:clickandcare/ui/views/profile/widgets/statistics_section.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -13,17 +17,34 @@ class ProfileView extends StackedView<ProfileViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      body: Container(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-        child: const Center(
-          child: Text(
-            'Profile',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        title: const Text(
+          'Profile',
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
+      ),
+      body: const SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: 16),
+            ProfileHeader(),
+            SizedBox(height: 24),
+            ActionButtons(),
+            SizedBox(height: 24),
+            StatisticsSection(),
+            SizedBox(height: 24),
+            RecentActivity(),
+          ],
         ),
       ),
     );

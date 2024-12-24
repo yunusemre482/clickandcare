@@ -45,7 +45,7 @@ class TopRatedSalons extends StatelessWidget {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(12),
-                        child: Image.network(
+                        child: Image.asset(
                           salon.image,
                           height: 140,
                           width: 140,

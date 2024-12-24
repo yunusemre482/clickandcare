@@ -1,3 +1,4 @@
+import 'package:clickandcare/ui/views/favorites/widgets/favorite_item.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -14,17 +15,33 @@ class FavoritesView extends StackedView<FavoritesViewModel> {
   ) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      body: Container(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-        child: const Center(
-          child: Text(
-            'Favorites',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w600,
-            ),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        title: const Text(
+          'Favorites',
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
           ),
         ),
+        centerTitle: true,
+        iconTheme: const IconThemeData(color: Colors.black),
+      ),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(16),
+        itemCount: viewModel.favoriteSalons.length,
+        itemBuilder: (context, index) {
+          final salon = viewModel.favoriteSalons[index];
+
+          return FavoriteItem(
+            name: salon.name,
+            location: salon.location,
+            rating: salon.rating,
+            imageUrl: salon.image,
+          );
+        },
       ),
     );
   }

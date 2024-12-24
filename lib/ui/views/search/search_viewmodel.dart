@@ -8,17 +8,24 @@ class SearchViewModel extends BaseViewModel {
 
   String selectedTab = 'Haircut';
   List<Salon> salons = [];
+  bool isLoading = true; // Add a loading state
 
-  void initialize() {
-    fetchSalons();
+  void initialize() async {
+    setBusy(true); // Indicate the ViewModel is busy
+    await fetchSalons();
+    setBusy(false); // Indicate the ViewModel is ready
   }
 
-  void fetchSalons() {
+  Future<void> fetchSalons() async {
+    isLoading = true;
+    notifyListeners();
+    await Future.delayed(const Duration(milliseconds: 500)); // Simulate a delay
     salons = _salonService.getSalonsForTab(selectedTab);
+    isLoading = false;
     notifyListeners();
   }
 
-  void changeTab(String tab) {
+  void changeTab(String tab) async {
     selectedTab = tab;
     fetchSalons();
   }

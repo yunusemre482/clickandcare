@@ -56,6 +56,7 @@ class SalonHeader extends StatelessWidget {
           child: ElevatedButton(
             onPressed: () {},
             style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
               backgroundColor: Colors.grey.shade200,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8),
@@ -64,7 +65,9 @@ class SalonHeader extends StatelessWidget {
             ),
             child: const Text(
               'Book',
-              style: TextStyle(color: Colors.black),
+              style: TextStyle(
+                color: Colors.black,
+              ),
             ),
           ),
         ),

@@ -13,8 +13,7 @@ class SalonService {
       description: 'A luxury salon for haircuts and coloring',
       location: 'West Village, New York',
       rating: '4.9 (12k)',
-      image:
-          'https://luxurylondon.co.uk/wp-content/uploads/2023/07/linnaean-nine-elms-1216x0-c-default.jpg',
+      image: 'assets/images/salons/salon1.jpg',
     ),
     Salon(
       id: '2',
@@ -22,8 +21,7 @@ class SalonService {
       description: 'A blowout salon for a quick hair fix',
       location: 'Upper East Side, New York',
       rating: '4.8 (10k)',
-      image:
-          'https://media.istockphoto.com/id/1463137828/tr/foto%C4%9Fraf/3d-render-of-beauty-spa-saloon.jpg?s=2048x2048&w=is&k=20&c=WUnECWFPHxh-odesbeaDEgK4QrA-GgXKDjghfOihQvM=',
+      image: 'assets/images/salons/salon2.jpg',
     ),
     Salon(
       id: '3',
@@ -31,8 +29,7 @@ class SalonService {
       description: 'A salon for blowouts and styling',
       location: 'Brooklyn, New York',
       rating: '4.6 (8k)',
-      image:
-          'https://luxurylondon.co.uk/wp-content/uploads/2022/08/still-dalston-salon-review-836x0-c-default.jpeg',
+      image: 'assets/images/salons/salon3.jpeg',
     ),
     Salon(
       id: '4',
@@ -40,8 +37,7 @@ class SalonService {
       description: 'A nail salon for manicures and pedicures',
       location: 'Soho, New York',
       rating: '4.7 (9k)',
-      image:
-          'https://www.thesalonbusiness.com/wp-content/uploads/2022/07/How-to-Start-a-Nail-Salon-Business.jpg',
+      image: 'assets/images/salons/salon4.webp',
     ),
     Salon(
       id: '5',
@@ -49,26 +45,23 @@ class SalonService {
       description: 'A blowout salon for a quick hair fix',
       location: 'Upper East Side, New York',
       rating: '4.8 (10k)',
-      image:
-          'https://media.istockphoto.com/id/1463137828/tr/foto%C4%9Fraf/3d-render-of-beauty-spa-saloon.jpg?s=2048x2048&w=is&k=20&c=WUnECWFPHxh-odesbeaDEgK4QrA-GgXKDjghfOihQvM=',
+      image: 'assets/images/salons/salon5.jpeg',
     ),
     Salon(
       id: '6',
-      name: 'Blowout Salon',
+      name: 'Massage Salon',
       description: 'A salon for blowouts and styling',
       location: 'Brooklyn, New York',
       rating: '4.9 (12k)',
-      image:
-          'https://luxurylondon.co.uk/wp-content/uploads/2023/07/linnaean-nine-elms-1216x0-c-default.jpg',
+      image: 'assets/images/salons/salon6.webp',
     ),
     Salon(
       id: '7',
-      name: 'Nail Bar 3',
-      description: 'A nail salon for manicures and pedicures',
+      name: 'Facial Spa',
+      description: 'A facial spa for skincare treatments',
       location: 'Soho, New York',
       rating: '4.7 (9k)',
-      image:
-          'https://www.thesalonbusiness.com/wp-content/uploads/2022/07/How-to-Start-a-Nail-Salon-Business.jpg',
+      image: 'assets/images/salons/salon8.jpg',
     ),
   ];
 
@@ -114,32 +107,28 @@ class SalonService {
   List<Service> getTrendingServices() {
     return [
       Service(
-        name: 'Gel manicure',
+        name: 'Gel Manicure',
         price: '\$45',
-        imageUrl:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiWspwKWMotSxGd86qqgfxQXXLM_OlAXHeHg&s',
+        imageUrl: 'assets/images/services/service1.jpeg',
         duration: "1 hour 15 minutes",
       ),
       Service(
-        name: 'Acne facial',
+        name: 'Deep Facial',
         price: '\$55',
-        imageUrl:
-            'https://www.verywellhealth.com/thmb/8wNZ3Gn92u3BjJsmIUvg7-lmC1o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/141863195-569fcc5b3df78cafda9e6182.jpg',
+        imageUrl: 'assets/images/services/service2.jpg',
         duration: "2 hours and 30 minutes",
       ),
       Service(
-        name: 'Acne facial',
-        price: '\$55',
-        imageUrl:
-            'https://www.verywellhealth.com/thmb/8wNZ3Gn92u3BjJsmIUvg7-lmC1o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/141863195-569fcc5b3df78cafda9e6182.jpg',
-        duration: "2 hours and 30 minutes",
+        name: 'Glow Facial',
+        price: '\$65',
+        imageUrl: 'assets/images/services/service3.jpeg',
+        duration: "1 hour 45 minutes",
       ),
       Service(
-        name: 'Acne facial',
-        price: '\$55',
-        imageUrl:
-            'https://www.verywellhealth.com/thmb/8wNZ3Gn92u3BjJsmIUvg7-lmC1o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/141863195-569fcc5b3df78cafda9e6182.jpg',
-        duration: "2 hours and 30 minutes",
+        name: 'Relax Massage',
+        price: '\$80',
+        imageUrl: 'assets/images/services/service4.avif',
+        duration: "2 hours",
       ),
     ];
   }

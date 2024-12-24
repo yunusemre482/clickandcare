@@ -2,7 +2,6 @@ import 'package:clickandcare/ui/views/appointment/appointment_view.dart';
 import 'package:clickandcare/ui/views/favorites/favorites_view.dart';
 import 'package:clickandcare/ui/views/home/home_view.dart';
 import 'package:clickandcare/ui/views/profile/profile_view.dart';
-import 'package:clickandcare/ui/views/salon_details/salon_details_view.dart';
 import 'package:clickandcare/ui/views/search/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
