@@ -1,3 +1,7 @@
+import 'package:clickandcare/ui/views/home/widgets/home_searchbar.dart';
+import 'package:clickandcare/ui/views/search/widgets/salon_list.dart';
+import 'package:clickandcare/ui/views/search/widgets/search_bar.dart';
+import 'package:clickandcare/ui/views/search/widgets/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -13,20 +17,24 @@ class SearchView extends StackedView<SearchViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
-      body: Container(
-        padding: const EdgeInsets.only(left: 25.0, right: 25.0),
-        child: const Center(
-          child: Text(
-            'Search',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.w600,
+        body: SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            const ModernSearchBar(
+              hintText: "Find your perfect salon...",
             ),
-          ),
+            HomeTabBar(
+                selectedTab: viewModel.selectedTab,
+                onTabChange: viewModel.changeTab),
+            Expanded(
+              child: SalonList(salons: viewModel.salons),
+            ),
+          ],
         ),
       ),
-    );
+    ));
   }
 
   @override

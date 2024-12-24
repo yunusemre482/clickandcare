@@ -1,10 +1,9 @@
-import 'package:clickandcare/ui/views/home/widgets/salon_list.dart';
-import 'package:clickandcare/ui/views/home/widgets/search_bar.dart';
-import 'package:clickandcare/ui/views/home/widgets/tab_bar.dart';
+import 'package:clickandcare/ui/views/home/widgets/category_buttons.dart';
+import 'package:clickandcare/ui/views/home/widgets/home_searchbar.dart';
+import 'package:clickandcare/ui/views/home/widgets/top_rated_salons.dart';
+import 'package:clickandcare/ui/views/home/widgets/trending_services.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:clickandcare/ui/common/app_colors.dart';
-import 'package:clickandcare/ui/common/ui_helpers.dart';
 
 import 'home_viewmodel.dart';
 
@@ -18,22 +17,24 @@ class HomeView extends StackedView<HomeViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-        body: SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: [
-            const HomeSearchBar(),
-            HomeTabBar(
-                selectedTab: viewModel.selectedTab,
-                onTabChange: viewModel.changeTab),
-            Expanded(
-              child: SalonList(salons: viewModel.salons),
-            ),
-          ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const ModernSearchBar(hintText: "Hairs, nails ,waxing...",),
+              const SizedBox(height: 16),
+              const CategoryButtons(),
+              const SizedBox(height: 24),
+              TopRatedSalons(salons: viewModel.getTopRatedSalons()),
+              const SizedBox(height: 24),
+              TrendingServices(services: viewModel.getTrendingServices()),
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 
   @override
