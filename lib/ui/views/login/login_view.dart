@@ -21,7 +21,7 @@ class LoginView extends StackedView<LoginViewModel> {
           },
         ),
       ),
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.fromLTRB(10, 6, 10, 0),
