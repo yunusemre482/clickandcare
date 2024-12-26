@@ -23,13 +23,19 @@ class StaffList extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             children: const [
               StaffItem(
-                  name: 'Jenny', imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabTekYZGEJYnPaeiGePEM632jJINFOR0-BQ&s'),
+                  name: 'Jenny',
+                  imageUrl:
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSabTekYZGEJYnPaeiGePEM632jJINFOR0-BQ&s'),
               SizedBox(width: 16),
               StaffItem(
-                  name: 'Linda', imageUrl: 'https://media.istockphoto.com/id/1206174016/photo/smile-of-the-professional.jpg?s=612x612&w=0&k=20&c=SSrrFne1Fw_PSh3nj9P4gRx0gxfjP9mKYx-KQ2Cxu-I='),
+                  name: 'Linda',
+                  imageUrl:
+                      'https://media.istockphoto.com/id/1206174016/photo/smile-of-the-professional.jpg?s=612x612&w=0&k=20&c=SSrrFne1Fw_PSh3nj9P4gRx0gxfjP9mKYx-KQ2Cxu-I='),
               SizedBox(width: 16),
               StaffItem(
-                  name: 'Rich', imageUrl: 'https://img.freepik.com/premium-photo/beautiful-woman-getting-haircut-by-hairdresser-beauty-salon_230311-26934.jpg'),
+                  name: 'Rich',
+                  imageUrl:
+                      'https://img.freepik.com/premium-photo/beautiful-woman-getting-haircut-by-hairdresser-beauty-salon_230311-26934.jpg'),
             ],
           ),
         ),

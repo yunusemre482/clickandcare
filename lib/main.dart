@@ -4,7 +4,6 @@ import 'package:clickandcare/app/app.bottomsheets.dart';
 import 'package:clickandcare/app/app.dialogs.dart';
 import 'package:clickandcare/app/app.locator.dart';
 import 'package:clickandcare/app/app.router.dart';
-import 'package:stacked_services/stacked_services.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -24,7 +23,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp.router(
       routeInformationParser: stackedRouter.defaultRouteParser(),
       routerDelegate: stackedRouter.delegate(initialRoutes: [
-        const LoginViewRoute(),
+        const OnboardingViewRoute(),
       ]),
       theme: CustomThemeService.lightTheme,
       darkTheme: CustomThemeService.darkTheme,

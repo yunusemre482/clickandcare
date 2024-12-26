@@ -86,7 +86,8 @@ class NewAppointmentForm extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blue, // Button background color
+                      backgroundColor:
+                          Color(0xffa29575), // Button background color
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -116,7 +117,7 @@ class NewAppointmentForm extends StatelessWidget {
         hintText: hint,
         prefixIcon: Icon(
           icon,
-          color: Colors.blue,
+          color: Color(0xffa29575),
           size: 18,
         ),
         filled: true,

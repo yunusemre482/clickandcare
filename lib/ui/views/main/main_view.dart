@@ -12,7 +12,6 @@ import 'main_viewmodel.dart';
 class MainView extends StackedView<MainViewModel> {
   const MainView({Key? key}) : super(key: key);
 
-  final int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
 
@@ -31,7 +30,7 @@ class MainView extends StackedView<MainViewModel> {
     Widget? child,
   ) {
     return Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: SafeArea(
           child: Center(
             child: _widgetOptions.elementAt(viewModel.selectedTabIndex),
@@ -47,49 +46,47 @@ class MainView extends StackedView<MainViewModel> {
                 child: Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
-                  child: Container(
-                    child: GNav(
-                      rippleColor: Colors.grey[300]!,
-                      hoverColor: Colors.grey[100]!,
-                      gap: 4,
-                      activeColor: Colors.black,
-                      iconSize: 24,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 15, vertical: 9),
-                      duration: const Duration(milliseconds: 400),
-                      tabBackgroundColor: Colors.grey[100]!,
-                      color: Colors.black,
-                      tabs: const [
-                        GButton(
-                          icon: FontAwesomeIcons.home,
-                          text: 'Home',
-                          iconSize: 18,
-                        ),
-                        GButton(
-                          icon: FontAwesomeIcons.heart,
-                          text: 'Favorites',
-                          iconSize: 18,
-                          iconActiveColor: Colors.pinkAccent,
-                        ),
-                        GButton(
-                          icon: FontAwesomeIcons.calendarXmark,
-                          text: 'Appointment',
-                          iconSize: 18,
-                        ),
-                        GButton(
-                          icon: FontAwesomeIcons.search,
-                          text: 'Search',
-                          iconSize: 18,
-                        ),
-                        GButton(
-                          icon: FontAwesomeIcons.user,
-                          text: 'Profile',
-                          iconSize: 18,
-                        ),
-                      ],
-                      selectedIndex: viewModel.selectedTabIndex,
-                      onTabChange: viewModel.updateSelectedTabIndex,
-                    ),
+                  child: GNav(
+                    rippleColor: Colors.grey[300]!,
+                    hoverColor: Colors.grey[100]!,
+                    gap: 4,
+                    activeColor: Colors.black,
+                    iconSize: 24,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 15, vertical: 9),
+                    duration: const Duration(milliseconds: 400),
+                    tabBackgroundColor: Colors.grey[100]!,
+                    color: Colors.black,
+                    tabs: const [
+                      GButton(
+                        icon: FontAwesomeIcons.home,
+                        text: 'Home',
+                        iconSize: 18,
+                      ),
+                      GButton(
+                        icon: FontAwesomeIcons.heart,
+                        text: 'Favorites',
+                        iconSize: 18,
+                        iconActiveColor: Colors.pinkAccent,
+                      ),
+                      GButton(
+                        icon: FontAwesomeIcons.calendarXmark,
+                        text: 'Appointment',
+                        iconSize: 18,
+                      ),
+                      GButton(
+                        icon: FontAwesomeIcons.search,
+                        text: 'Search',
+                        iconSize: 18,
+                      ),
+                      GButton(
+                        icon: FontAwesomeIcons.user,
+                        text: 'Profile',
+                        iconSize: 18,
+                      ),
+                    ],
+                    selectedIndex: viewModel.selectedTabIndex,
+                    onTabChange: viewModel.updateSelectedTabIndex,
                   ),
                 ))));
   }

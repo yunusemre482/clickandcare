@@ -14,17 +14,22 @@ class LoginView extends StackedView<LoginViewModel> {
   ) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
-          onPressed: () {
-            //Navigator.pop(context);
-          },
+        elevation: 0,
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        iconTheme: const IconThemeData(color: Colors.black),
+        title: const Text(
+          'CareClub',
+          style: TextStyle(
+            color: Color(0xffa29575),
+            fontSize: 32,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: SafeArea(
           child: Padding(
-        padding: const EdgeInsets.fromLTRB(10, 6, 10, 0),
+        padding: const EdgeInsets.fromLTRB(10, 60, 10, 0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -53,6 +58,9 @@ class LoginView extends StackedView<LoginViewModel> {
               height: 20,
             ),
             TextField(
+                obscureText: true,
+                enableSuggestions: false,
+                autocorrect: false,
                 cursorColor: Colors.black,
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
@@ -82,7 +90,7 @@ class LoginView extends StackedView<LoginViewModel> {
                 child: ElevatedButton(
                     onPressed: () => {viewModel.navigateToHomeView()},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.blueAccent,
+                      backgroundColor: Color(0xffa29575),
                       shadowColor: Colors.grey, // Gölge rengi
                       elevation: 2, // Gölgenin yüksekliği
                       shape: RoundedRectangleBorder(

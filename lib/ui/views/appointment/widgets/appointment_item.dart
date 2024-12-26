@@ -1,4 +1,3 @@
-import 'package:clickandcare/ui/views/appointment/widgets/new_appointment_form.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentItem extends StatelessWidget {

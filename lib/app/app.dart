@@ -19,11 +19,13 @@ import 'package:clickandcare/ui/views/profile/profile_view.dart';
 import 'package:clickandcare/ui/views/appointment/appointment_view.dart';
 import 'package:clickandcare/ui/views/favorites/favorites_view.dart';
 import 'package:clickandcare/ui/views/search/search_view.dart';
+import 'package:clickandcare/ui/views/onboarding/onboarding_view.dart';
 // @stacked-import
 
 @StackedApp(
   routes: [
-    MaterialRoute(page: LoginView, initial: true),
+    MaterialRoute(page: OnboardingView, initial: true),
+    MaterialRoute(page: LoginView),
     MaterialRoute(page: HomeView),
     MaterialRoute(page: StartupView),
     MaterialRoute(page: SplashView),
@@ -43,6 +45,7 @@ import 'package:clickandcare/ui/views/search/search_view.dart';
     MaterialRoute(page: AppointmentView),
     MaterialRoute(page: FavoritesView),
     MaterialRoute(page: SearchView),
+
 // @stacked-route
   ],
   dependencies: [

@@ -9,6 +9,7 @@ import 'package:flutter/material.dart' as _i16;
 import 'package:stacked/stacked.dart' as _i15;
 import 'package:stacked_services/stacked_services.dart' as _i14;
 
+import '../ui/views/onboarding/onboarding_view.dart' as _i0;
 import '../ui/views/appointment/appointment_view.dart' as _i11;
 import '../ui/views/booking/booking_view.dart' as _i8;
 import '../ui/views/favorites/favorites_view.dart' as _i12;
@@ -32,6 +33,12 @@ class StackedRouterWeb extends _i15.RootStackRouter {
 
   @override
   final Map<String, _i15.PageFactory> pagesMap = {
+    OnboardingViewRoute.name: (routeData) {
+      return _i15.MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const _i0.OnboardingView(),
+      );
+    },
     LoginViewRoute.name: (routeData) {
       return _i15.MaterialPageX<dynamic>(
         routeData: routeData,
@@ -115,6 +122,10 @@ class StackedRouterWeb extends _i15.RootStackRouter {
   @override
   List<_i15.RouteConfig> get routes => [
         _i15.RouteConfig(
+          OnboardingViewRoute.name,
+          path: '/onboarding-view',
+        ),
+        _i15.RouteConfig(
           LoginViewRoute.name,
           path: '/',
         ),
@@ -167,6 +178,18 @@ class StackedRouterWeb extends _i15.RootStackRouter {
           path: '/search-view',
         ),
       ];
+}
+
+/// generated route for
+/// [_i0.OnboardingView]
+class OnboardingViewRoute extends _i15.PageRouteInfo<void> {
+  const OnboardingViewRoute()
+      : super(
+          OnboardingViewRoute.name,
+          path: '/onboarding-view',
+        );
+
+  static const String name = 'OnboardingView';
 }
 
 /// generated route for
@@ -326,6 +349,14 @@ class SearchViewRoute extends _i15.PageRouteInfo<void> {
 }
 
 extension RouterStateExtension on _i14.RouterService {
+  Future<dynamic> navigateToOnboardingView(
+      {void Function(_i15.NavigationFailure)? onFailure}) async {
+    return navigateTo(
+      const OnboardingViewRoute(),
+      onFailure: onFailure,
+    );
+  }
+
   Future<dynamic> navigateToLoginView(
       {void Function(_i15.NavigationFailure)? onFailure}) async {
     return navigateTo(

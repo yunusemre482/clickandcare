@@ -17,6 +17,6 @@ class Activity {
 // Enum for defining activity types
 enum ActivityType {
   booking, // Represents booking-related activities
-  review,  // Represents review-related activities
+  review, // Represents review-related activities
   favorite // Represents favorite-related activities
 }

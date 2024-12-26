@@ -23,7 +23,9 @@ class HomeView extends StackedView<HomeViewModel> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              const ModernSearchBar(hintText: "Hairs, nails ,waxing...",),
+              const ModernSearchBar(
+                hintText: "Hairs, nails ,waxing...",
+              ),
               const SizedBox(height: 16),
               const CategoryButtons(),
               const SizedBox(height: 24),

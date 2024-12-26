@@ -53,8 +53,8 @@ class AppointmentView extends StackedView<AppointmentViewModel> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
-        backgroundColor: Colors.blueAccent,
-        focusColor: Colors.blueAccent,
+        backgroundColor: const Color(0xffa29575),
+        focusColor: const Color(0xffa29575),
         child: const Icon(
           Icons.add,
           color: Colors.white,
